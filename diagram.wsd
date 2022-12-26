@@ -1,0 +1,26 @@
+@startuml banka
+
+object hesap
+hesap : id
+hesap : ad
+hesap : kullanıcı
+hesap : bakiye
+
+
+object transfer
+transfer : kaynak hesap
+transfer : hedef hesap
+transfer : tutar
+
+object kullanıcı
+kullanıcı : id
+kullanıcı : ad
+
+transfer::kaynak --> hesap : id
+transfer::hedef --> hesap : id
+
+hesap::kullanıcı --> kullanıcı : id
+
+
+
+@enduml
